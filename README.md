@@ -1,4 +1,4 @@
-# GTA Soundboard
+# YAML Soundboard
 
 Browser soundboard driven by [sounds.yaml](sounds.yaml). No build step.
 
