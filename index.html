@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en" class="h-full">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>GTA Soundboard</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://cdn.jsdelivr.net/npm/js-yaml@4.1.0/dist/js-yaml.min.js"></script>
+  <style>
+    .eq-bar {
+      transform-origin: bottom;
+      transform: scaleY(0.04);
+      transition: transform 60ms linear;
+    }
+  </style>
+</head>
+<body class="h-full bg-slate-900 text-slate-100">
+  <main class="mx-auto max-w-5xl p-6">
+    <header class="mb-6 flex items-center justify-between gap-4">
+      <h1 id="title" class="text-2xl font-bold tracking-tight">Soundboard</h1>
+
+      <button id="stop" title="Stop playback"
+        class="hidden inline-flex items-center gap-2 rounded-full bg-red-600 py-1.5 pl-3 pr-4 text-sm font-semibold text-white shadow transition hover:bg-red-500 active:scale-95 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-red-400">
+        <svg viewBox="0 0 24 24" class="h-4 w-4" fill="currentColor" aria-hidden="true">
+          <rect x="6" y="6" width="12" height="12" rx="2" />
+        </svg>
+        Stop playback
+      </button>
+
+      <label class="flex items-center gap-2 text-sm text-slate-400">
+        Volume
+        <input id="volume" type="range" min="0" max="1" step="0.05" value="1" class="w-32 accent-slate-300" />
+      </label>
+    </header>
+
+    <div id="status" class="mb-4 hidden rounded-md border border-red-500/40 bg-red-500/10 p-3 text-sm text-red-200"></div>
+
+    <div id="board" class="grid grid-cols-2 gap-3 sm:grid-cols-3 lg:grid-cols-4"></div>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>

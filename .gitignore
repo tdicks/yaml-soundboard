@@ -1,0 +1,3 @@
+# Media files are excluded to avoid committing copyrighted audio.
+sounds/*
+!sounds/README.txt

@@ -1,0 +1,163 @@
+# Soundboard configuration.
+#
+# Button types:
+#   type: file    -> plays the single MP3 in `file`
+#   type: random  -> plays one randomly chosen MP3 from `files` and/or `list`
+#
+# `list` refers to a name under the `lists:` section below, and may be a single
+# name or a sequence of names. It can be combined with an inline `files:` list.
+#
+# `category` refers to a name under the `categories:` section. It supplies the
+# button colour and is shown in the button's top-left corner. A button can still
+# set `colour:` directly to override the category colour.
+#
+# Colours pick a Tailwind palette (see COLOURS in app.js):
+#   slate, red, orange, amber, yellow, lime, green, emerald, teal, cyan,
+#   sky, blue, indigo, violet, purple, fuchsia, pink, rose
+
+title: GTA Soundboard
+
+categories:
+  bites:
+    name: Bite
+    colour: red
+
+  commercials:
+    name: Commercial
+    colour: sky
+
+  lazlow:
+    name: Lazlow
+    colour: purple
+
+  phones:
+    name: Phone-In
+    colour: teal
+
+  misc:
+    name: Misc
+    colour: amber
+
+  mixed:
+    name: Mixed
+    colour: fuchsia
+
+# Reusable MP3 lists, referenced by random buttons via `list:`.
+lists:
+  bites:
+    - sounds/bite-1.mp3
+    - sounds/bite-2.mp3
+    - sounds/bite-3.mp3
+    - sounds/bite-4.mp3
+    - sounds/bite-5.mp3
+    - sounds/bite-6.mp3
+    - sounds/bite-7.mp3
+    - sounds/bite-8.mp3
+
+  commercials:
+    - sounds/commercial-american-car.mp3
+    - sounds/commercial-ammu-nation.mp3
+    - sounds/commercial-complete-the-look.mp3
+    - sounds/commercial-exploder-1.mp3
+    - sounds/commercial-knife-after-dark.mp3
+    - sounds/commercial-love-fist.mp3
+    - sounds/commercial-maibatsu-thunder.mp3
+    - sounds/commercial-survival-knife.mp3
+
+  lazlow:
+    - sounds/lazlow-1.mp3
+    - sounds/lazlow-bite-2.mp3
+    - sounds/lazlow-complaining.mp3
+    - sounds/lazlow-crash-and-burn.mp3
+    - sounds/lazlow-flunk.mp3
+
+  phones:
+    - sounds/phones-big-mitch-baker.mp3
+    - sounds/phones-snow-dawg-and-the-black-trash-baags.mp3
+
+buttons:
+  - label: Random Bite
+    type: random
+    category: bites
+    list: bites
+
+  - label: Random Lazlow
+    type: random
+    category: lazlow
+    list: lazlow
+
+  - label: Random Phone-In
+    type: random
+    category: phones
+    list: phones
+
+  - label: Cousin Ed
+    type: file
+    file: sounds/cousin-ed.mp3
+    category: phones
+
+  - label: Big Mitch Baker
+    type: file
+    file: sounds/phones-big-mitch-baker.mp3
+    category: phones
+
+  - label: Snow Dawg and the Black Trash Baags
+    type: file
+    file: sounds/phones-snow-dawg-and-the-black-trash-baags.mp3
+    category: phones
+
+  - label: Random Commercial
+    type: random
+    category: commercials
+    list: commercials
+
+  - label: American Car
+    type: file
+    file: sounds/commercial-american-car.mp3
+    category: commercials
+
+  - label: Ammu-Nation
+    type: file
+    file: sounds/commercial-ammu-nation.mp3
+    category: commercials
+
+  - label: Complete The Look
+    type: file
+    file: sounds/commercial-complete-the-look.mp3
+    category: commercials
+
+  - label: Exploder 1
+    type: file
+    file: sounds/commercial-exploder-1.mp3
+    category: commercials
+
+  - label: Knife After Dark
+    type: file
+    file: sounds/commercial-knife-after-dark.mp3
+    category: commercials
+
+  - label: Love Fist
+    type: file
+    file: sounds/commercial-love-fist.mp3
+    category: commercials
+
+  - label: Maibatsu Thunder
+    type: file
+    file: sounds/commercial-maibatsu-thunder.mp3
+    category: commercials
+
+  - label: Survival Knife
+    type: file
+    file: sounds/commercial-survival-knife.mp3
+    category: commercials
+
+  - label: Random Anything
+    type: random
+    category: mixed
+    list:
+      - bites
+      - commercials
+      - lazlow
+      - phones
+    files:
+      - sounds/cousin-ed.mp3
