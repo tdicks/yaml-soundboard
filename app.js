@@ -103,7 +103,7 @@ function setPlayingButton(button) {
     if (badge) badge.textContent = badge.dataset.duration;
   }
   playingButton = button;
-  stopEl.classList.toggle('hidden', !playingButton);
+  stopEl.classList.toggle('invisible', !playingButton);
   if (playingButton) {
     playingButton.classList.add(...PLAYING_CLASSES);
     playingButton.querySelector('[data-equaliser]').classList.remove('opacity-0');

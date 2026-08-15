@@ -16,20 +16,20 @@
 </head>
 <body class="h-full bg-slate-900 text-slate-100">
   <main class="mx-auto max-w-5xl p-6">
-    <header class="mb-6 flex items-center justify-between gap-4">
+    <header class="mb-6 grid grid-cols-[1fr_auto_1fr] items-center gap-3">
       <h1 id="title" class="text-2xl font-bold tracking-tight">Soundboard</h1>
 
-      <button id="stop" title="Stop playback"
-        class="hidden inline-flex items-center gap-2 rounded-full bg-red-600 py-1.5 pl-3 pr-4 text-sm font-semibold text-white shadow transition hover:bg-red-500 active:scale-95 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-red-400">
+      <button id="stop" title="Stop playback" aria-label="Stop playback"
+        class="invisible inline-flex items-center gap-2 justify-self-center rounded-full bg-red-600 p-1.5 text-sm font-semibold text-white shadow transition hover:bg-red-500 active:scale-95 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-red-400 sm:py-1.5 sm:pl-3 sm:pr-4">
         <svg viewBox="0 0 24 24" class="h-4 w-4" fill="currentColor" aria-hidden="true">
           <rect x="6" y="6" width="12" height="12" rx="2" />
         </svg>
-        Stop playback
+        <span class="hidden sm:inline">Stop playback</span>
       </button>
 
-      <label class="flex items-center gap-2 text-sm text-slate-400">
-        Volume
-        <input id="volume" type="range" min="0" max="1" step="0.05" value="1" class="w-32 accent-slate-300" />
+      <label class="flex items-center justify-end gap-2 justify-self-end text-sm text-slate-400">
+        <span class="hidden sm:inline">Volume</span>
+        <input id="volume" type="range" min="0" max="1" step="0.05" value="1" class="w-24 accent-slate-300 sm:w-32" />
       </label>
     </header>
 
