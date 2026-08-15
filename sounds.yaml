@@ -74,8 +74,19 @@ lists:
   phones:
     - sounds/phones-big-mitch-baker.mp3
     - sounds/phones-snow-dawg-and-the-black-trash-baags.mp3
+    - sounds/cousin-ed.mp3
 
 buttons:
+
+  - label: Random Anything
+    type: random
+    category: mixed
+    list:
+      - bites
+      - commercials
+      - lazlow
+      - phones
+
   - label: Random Bite
     type: random
     category: bites
@@ -150,14 +161,3 @@ buttons:
     type: file
     file: sounds/commercial-survival-knife.mp3
     category: commercials
-
-  - label: Random Anything
-    type: random
-    category: mixed
-    list:
-      - bites
-      - commercials
-      - lazlow
-      - phones
-    files:
-      - sounds/cousin-ed.mp3
