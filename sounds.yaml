@@ -30,6 +30,10 @@ categories:
     name: Lazlow
     colour: purple
 
+  ed:
+    name: Ed
+    colour: lime
+
   phones:
     name: Phone-In
     colour: teal
@@ -53,16 +57,38 @@ lists:
     - sounds/bite-6.mp3
     - sounds/bite-7.mp3
     - sounds/bite-8.mp3
+    - sounds/bite-9.mp3
+    - sounds/bite-10.mp3
+    - sounds/bite-11.mp3
+    - sounds/bite-12.mp3
+    - sounds/bite-13.mp3
+    - sounds/bite-14.mp3
+    - sounds/bite-15.mp3
+    - sounds/bite-16.mp3
+    - sounds/bite-17.mp3
 
   commercials:
+    - sounds/commercial-00lager.mp3
     - sounds/commercial-american-car.mp3
     - sounds/commercial-ammu-nation.mp3
+    - sounds/commercial-ammunation-1.mp3
+    - sounds/commercial-ammunation-2.mp3
     - sounds/commercial-complete-the-look.mp3
     - sounds/commercial-exploder-1.mp3
     - sounds/commercial-knife-after-dark.mp3
     - sounds/commercial-love-fist.mp3
     - sounds/commercial-maibatsu-thunder.mp3
+    - sounds/commercial-pushup.mp3
     - sounds/commercial-survival-knife.mp3
+    - sounds/commercial-twilight-knife.mp3
+    - sounds/commercial-vrock.mp3
+
+  ed:
+    - sounds/ed.mp3
+    - sounds/ed-and-lazlow-1.mp3
+    - sounds/ed-and-lazlow-2.mp3
+    - sounds/ed-and-lazlow-3.mp3
+    - sounds/ed-and-lazlow-4.mp3
 
   lazlow:
     - sounds/lazlow-1.mp3
@@ -72,6 +98,7 @@ lists:
     - sounds/lazlow-flunk.mp3
 
   phones:
+    - sounds/call-in.mp3
     - sounds/phones-big-mitch-baker.mp3
     - sounds/phones-snow-dawg-and-the-black-trash-baags.mp3
     - sounds/cousin-ed.mp3
@@ -86,6 +113,7 @@ buttons:
       - commercials
       - lazlow
       - phones
+      - ed
 
   - label: Random Bite
     type: random
@@ -97,10 +125,20 @@ buttons:
     category: lazlow
     list: lazlow
 
+  - label: Random Cousin Ed
+    type: random
+    category: ed
+    list: ed
+
   - label: Random Phone-In
     type: random
     category: phones
     list: phones
+
+  - label: Money Giveaway
+    type: file
+    file: sounds/call-in.mp3
+    category: phones
 
   - label: Cousin Ed
     type: file
@@ -122,6 +160,11 @@ buttons:
     category: commercials
     list: commercials
 
+  - label: 00 Lager
+    type: file
+    file: sounds/commercial-00lager.mp3
+    category: commercials
+
   - label: American Car
     type: file
     file: sounds/commercial-american-car.mp3
@@ -132,12 +175,22 @@ buttons:
     file: sounds/commercial-ammu-nation.mp3
     category: commercials
 
+  - label: Ammu-Nation VCS 1
+    type: file
+    file: sounds/commercial-ammunation-1.mp3
+    category: commercials
+
+  - label: Ammu-Nation VCS 2
+    type: file
+    file: sounds/commercial-ammunation-2.mp3
+    category: commercials
+
   - label: Complete The Look
     type: file
     file: sounds/commercial-complete-the-look.mp3
     category: commercials
 
-  - label: Exploder 1
+  - label: Exploder Movie
     type: file
     file: sounds/commercial-exploder-1.mp3
     category: commercials
@@ -157,7 +210,22 @@ buttons:
     file: sounds/commercial-maibatsu-thunder.mp3
     category: commercials
 
+  - label: Pushup
+    type: file
+    file: sounds/commercial-pushup.mp3
+    category: commercials
+
   - label: Survival Knife
     type: file
     file: sounds/commercial-survival-knife.mp3
+    category: commercials
+
+  - label: Twilight Knife
+    type: file
+    file: sounds/commercial-twilight-knife.mp3
+    category: commercials
+
+  - label: V-Rock
+    type: file
+    file: sounds/commercial-vrock.mp3
     category: commercials
